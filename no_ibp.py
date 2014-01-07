@@ -26,7 +26,6 @@ def run_sampler(iterations, X, alpha, epsilon, lamb, p, max_newK):
     sampled in this code.
     """
     
-    lhoods = []
     Z, Y = initialize_ZY(X, alpha, max_newK)
 
     for iter in xrange(1, iterations+1):
@@ -53,6 +52,8 @@ def initialize_ZY(X, alpha, newK):
     Initialize X, Z, Y
     :param X: observing matrix X, array
     """
+    
+    print "Initializing matrices Z and Y..."
 
     # matrix X
     (N, T) = X.shape
@@ -65,6 +66,8 @@ def initialize_ZY(X, alpha, newK):
 
     # initial matrix Y
     Y = np.eye(K, T)
+
+    print "Initialization done."
 
     return initial_Z, Y
 
@@ -371,5 +374,5 @@ X = np.array([[randint(0,1) for i in range(4)] for i in range(50)])
 
 Z, Y = run_sampler(iterations, X, alpha, epsilon, lamb, p, max_newK)
 
-print "TODO: plot results!"
+print "TODO: show results!"
 

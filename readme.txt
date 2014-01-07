@@ -1,7 +1,7 @@
 @Naho Orita (naho@umd.edu)
 
-This is an implementation of Noisy-Or IBP in Python
-based on the code by Frank Wood: 
+This is an implementation of Noisy-Or IBP (Gibbs sampling) in Python
+based on the Matlab code by Frank Wood: 
 http://www.robots.ox.ac.uk/~fwood/Code/ibp.zip
 
 *** This code comes with no guarantees. ***
@@ -21,8 +21,9 @@ How to use:
 
 :iterations: a number of iterations (say 1000-2000?)
 :alpha, epsilon, lambda p: hyperparameters described in Wood et
-al. (2006).
+al. (2006). Hyperparameters are not sampled in this code.
 :max_newK: a maximum number of latent features
 
 TODO:
-plot results!
+Show results! You can print the resulting matrices Z and Y (line 375)
+if you want.
